@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>metrics</id>
+	<name>System Performance and Utilization Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.metrics</package>
+	<author>milinda-ruk</author>
+	<description>
+		Monitors System Performance and Utilization of Installation
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/metrics/update.rdf</updateURL>
+	<require_version>1.11.0-SNAPSHOT</require_version>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>org.openmrs.module.metrics.SystemPerformanceandUtilizationActivator</activator>
+	
+	
+	<!-- Adds link to admin page -->
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.metrics.extension.html.AdminList</class>
+	</extension>
+	
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+		SystemPerformanceandUtilization.hbm.xml
+				
+	</mappingFiles>
+
+	<!-- Internationalization -->
+	<!-- All message codes should start with metrics. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+
